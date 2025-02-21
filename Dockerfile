@@ -15,9 +15,9 @@ COPY lib/kamal/version.rb /kamal/lib/kamal/version.rb
 # Install system dependencies
 RUN apk add --no-cache build-base git docker openrc openssh-client-default yaml-dev \
     && rc-update add docker boot \
-    && gem -v
+    && gem -v \
     && gem install bundler --version=2.4.3 \
-    && gem -v
+    && gem -v \
     && bundle platform \
     && bundle install
 
